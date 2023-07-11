@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.employee-form {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.custom-input {
+  outline: none;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  resize: none;
+}
+
+.custom-input::placeholder {
+  color: gray;
+}
+
+.submit-button {
+  padding: 10px;
+  font-weight: bold;
+  width: 100px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button.submitting {
+  background-color: transparent;
+  border: 1px solid #4caf50;
+  color: black;
+}
+
+.submit-button.submitting {
+  width: 120px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-resume-label {
+  font-size: 14px;
+}
+
+/* Style for the error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  /* margin-top: 5px; */
+  margin-left: 15px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.succesMessage {
+  color: #048242;
+  font-size: 16px;
+  margin-left: 15px;
+}

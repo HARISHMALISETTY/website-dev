@@ -1,0 +1,192 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  padding-left: 3px;
+  grid-template-columns: 80% 20%;
+  width: 270px;
+  height: 100%;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.card-initial-text-container {
+  height: 60px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-initial-text-container-last-item {
+  border: 0
+}
+
+.card-initial-text {
+  color: white;
+  margin: 0;
+  text-align: right;
+}
+
+.card-button {
+  background-color: white;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.card-button:hover {
+  cursor: pointer;
+}
+
+.card-button-active {
+  background-color: #4caf50;
+}
+
+.card-button-icon-active {
+  color: white;
+}
+
+.card-button:hover .card-icon {
+  color: white;
+}
+
+.card-tab-buttons div:first-child {
+  border-top-right-radius: 15px;
+}
+
+.card-tab-buttons div:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+.card-text {
+  color: white;
+  font-family: Roboto;
+  align-self: flex-start;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+.selected-tab-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.missed-call-number {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.custom-input {
+  outline: none;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: none;
+}
+
+.submit-button {
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: transparent;
+  border: 1px solid #4caf50;
+}
+
+.qr-img {
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+.title {
+  display: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+  .card-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .card-tab-buttons {
+    display: flex;
+  }
+
+  .card-button {
+    border-radius: none;
+    width: 100%;
+    border: 1px solid gray;
+  }
+
+  .card-tab-buttons div:first-child {
+    border-radius: 0;
+  }
+
+  .card-tab-buttons div:last-child {
+    border-radius: 0;
+  }
+
+  .preview-content {
+    display: none;
+  }
+
+  .container {
+    background-color: #048242;
+  }
+
+  .title {
+    display: block;
+    color: white;
+    text-align: center;
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.succesMessage {
+  color: #048242;
+  font-size: 16px;
+  margin-left: 15px;
+}

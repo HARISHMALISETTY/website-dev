@@ -1,0 +1,60 @@
+.main-container {
+  margin: 50px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  color: #048242;
+}
+
+.description {
+  /* font-size: 14px; */
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-address {
+  position: absolute;
+  width: 205px;
+  /* background-color: #048242; */
+  bottom: 5px;
+  left: 50px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  /* backdrop-filter: saturate(180%) blur(10px); */
+}
+
+
+.map-address-name,
+.map-address-number {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.map-address-number {
+  color: white;
+  text-decoration: none;
+  gap: 5px;
+}
+
+.map-address-text {
+  padding-left: 15px;
+  font-size: 12px;
+  line-height: 1.5;
+}

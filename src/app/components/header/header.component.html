@@ -1,0 +1,52 @@
+<mat-toolbar style=" color: white;">
+  <div style="display: flex;justify-content: flex-end;">
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/about-us" routerLinkActive="link-active">About Us </a>
+      </li>
+      <li>
+        <a routerLink="/book-appointment" routerLinkActive="link-active">Book Appointment</a>
+      </li>
+      <li>
+        <a routerLink="/our-services" routerLinkActive="link-active">Our Services </a>
+      </li>
+      <li>
+        <a routerLink="/faqs" routerLinkActive="link-active">Facts & FAQ's </a>
+      </li>
+      <li>
+        <a routerLink="/contact-us" routerLinkActive="link-active">Contact Us </a>
+      </li>
+    </ul>
+  </div>
+  <mat-toolbar-row style="display: flex; justify-content: space-between;align-items: center;  flex: 1 1 auto;">
+    <img src="assets/click2clean-logo.png" routerLink="" class="logo" height="auto" width="50" />
+    <div style="width: 50%; display:flex;justify-content: flex-end; align-items: center;">
+      <select [(ngModel)]="userCity" (change)="saveUserCity()" class="city-select">
+        <option [disabled]="true" *ngIf="!isUserLocationServiceable(userCity)" value="">Not Serviceable in
+          {{currentUserCityName}}</option>
+        <option [value]="city" *ngFor="let city of serviceableCities">{{city}}</option>
+      </select>
+      <button class="menu-icon" mat-icon-button (click)="openSideMenu()" style="margin-left:5px;">
+        <mat-icon color="primary">menu</mat-icon>
+        <!-- <mat-icon color="primary" *ngIf="sidenav.opened">close</mat-icon> -->
+      </button>
+
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/profile.php?id=100091534262683" target="_blank" rel="noreferrer">
+          <img src="assets/Facebook.svg" height="25" width="25" />
+        </a>
+        <a href="https://twitter.com/ClickToClean3" target="_blank" rel="noreferrer">
+          <img src="assets/Twitter.svg" height="25" width="25" />
+        </a>
+        <a href="https://www.instagram.com/clicktoclean.in" target="_blank" rel="noreferrer">
+          <img src="assets/Instagram.svg" height="25" width="25" />
+        </a>
+        <a href="https://in.pinterest.com/clicktoclean3/" target="_blank" rel="noreferrer">
+          <img src="assets/pininterest.svg" height="25" width="25" />
+        </a>
+      </div>
+
+
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

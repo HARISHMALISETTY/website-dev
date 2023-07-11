@@ -1,0 +1,39 @@
+footer {
+  padding: 20px;
+  background-color: black;
+  color: whitesmoke;
+  /* margin-bottom: 10px; */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copyright {
+  margin: 0;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(178, 177, 177);
+}
+
+.link-active {
+  cursor: pointer;
+}
+
+.link-active:hover {
+  color: #288f5b;
+  font-weight: 500;
+}

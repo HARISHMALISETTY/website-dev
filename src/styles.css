@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --swiper-navigation-size: 25px;
+  --swiper-navigation-color: gray;
+}
+
+.swiper-button-next {
+  margin-top: 0px;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  width: 45px;
+  height: 45px;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 45px;
+  height: 45px;
+  transform: translateY(-50%);
+  margin-top: 0px;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  /* color: #6dbd48; */
+  color: gray;
+}
+
+.disabled-navigation {
+  color: gray;
+}
+
+.white-icon {
+  color: white;
+}
+
+app-cancellation-policy {
+  flex: 1 !important;
+}
+
+app-page-not-found {
+  flex: 1 !important;
+}

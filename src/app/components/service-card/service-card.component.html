@@ -1,0 +1,23 @@
+<!-- <div class="card-container" [class.card-container-light-background]="lightColor">
+  <div class="card-header">
+    <img [src]="backgroundImage" height="110px" width="100%" />
+    <p class="title">{{title}}</p>
+  </div>
+  <div class="card-content">
+    <details (click)="setActiveId(i)" [open]='i===activeId' *ngFor="let item of list; index as i;">
+      <summary>{{item.title}}</summary>
+      <p>{{item.desc}}</p>
+    </details>
+  </div>
+</div> --> 
+ <div style="display: flex !important; gap: 20px; justify-content: center; margin-left: 100px;">
+  <h2>{{title}}</h2><hr>  
+  <div *ngFor="let item of list;index as i;" class="container">     
+  <img [src]="backgroundImage" height="260px" width="100%" style="border-radius: 10px;"/>
+  <h1>{{item.title}}</h1>
+  <p>{{item.desc}}</p>
+</div>
+</div>
+
+
+

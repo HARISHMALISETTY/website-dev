@@ -1,0 +1,82 @@
+<div class="title">
+  <p>QUATERLY/ANNUAL</p>
+  <p>SERVICE PACKAGES</p>
+</div>
+
+
+
+<swiper #swiper class="service-packages-carousel" [pagination]="true" [slidesPerView]="1" (swiper)="onSwiper($event)"
+  [breakpoints]="breakpoints" (slideChange)="onSlideChange()">
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card-header">
+        <img src="assets/Office.png" />
+        <div class="card-header-text-container">
+          <p class="card-header-name">CLICK2CLEAN</p>
+          <p class="card-header-service-type">OFFICE</p>
+        </div>
+      </div>
+      <div class="card-content">
+        <ul class="card-list">
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+        </ul>
+      </div>
+      <button class="card-button">Book Now</button>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card-header">
+        <img src="assets/Home.png" />
+        <div class="card-header-text-container">
+          <p class="card-header-name">CLICK2CLEAN</p>
+          <p class="card-header-service-type">HOME</p>
+        </div>
+      </div>
+      <div class="card-content">
+        <ul class="card-list">
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+        </ul>
+      </div>
+      <button class="card-button">Book Now</button>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card-header">
+        <img src="assets/Nature.png" />
+        <div class="card-header-text-container">
+          <p class="card-header-name">CLICK2CLEAN</p>
+          <p class="card-header-service-type">NATURE</p>
+        </div>
+      </div>
+      <div class="card-content">
+        <ul class="card-list">
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+          <li class="right">Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit</li>
+        </ul>
+      </div>
+      <button class="card-button">Book Now</button>
+    </div>
+  </ng-template>
+</swiper>

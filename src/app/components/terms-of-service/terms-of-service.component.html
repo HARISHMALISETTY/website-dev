@@ -1,0 +1,9 @@
+<mat-dialog-content class="mat-typography">
+  <div style="display: flex;justify-content: center;padding:10px">
+    <div style="width:100%;max-width:900px;" [innerHTML]="termsAndConditions | safeHtml"></div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button [mat-dialog-close]="true" style="background-color: #048242; color: #fff;">Close</button>
+</mat-dialog-actions>

@@ -1,0 +1,53 @@
+button {
+  padding: 10px;
+  font-weight: bold;
+  width: 100px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container,
+.container1 {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px 5px 20px 5px;
+  margin: 5px;
+}
+
+.container {
+  background-color: #f3f3f3;
+  flex-direction: row-reverse;
+}
+
+.title {
+  color: #048242;
+}
+
+.info-container {
+  max-width: 800px;
+}
+
+@media screen and (max-width:768px) {
+  .title {
+    text-align: center;
+  }
+
+  .container {
+    gap: 20px;
+  }
+}

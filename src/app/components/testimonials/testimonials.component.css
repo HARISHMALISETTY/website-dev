@@ -1,0 +1,90 @@
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; */
+}
+
+.title p:first-child{
+  font-size: 30px;
+  font-weight: 400;
+  color: #4caf50;
+  margin: 0;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* gap: 40px; */
+  margin-top:50px;
+  margin-bottom: 20px;
+  border:1px solid #4caf50;
+  width: 260px;
+  border-radius: 15px;
+  padding: 10px;
+
+  }
+
+  .card{
+    position: relative;
+    height: 185px;
+  }
+
+
+  .card-image{
+    position: absolute;
+    transform:translateX(-50%) translateY(-70%);
+  }
+
+  .card-text{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .card-customer-name{
+    text-align: center;
+  }
+
+  .card-customer-name p:first-child{
+    font-weight: bold;
+  }
+
+  .card-customer-name p:last-child{
+    font-weight: 500;
+  }
+
+
+
+  .testimonial-carousel {
+    /* width: 100%; */
+    max-width: 900px;
+    padding-bottom: 40px ;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {}
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {}
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {}
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }

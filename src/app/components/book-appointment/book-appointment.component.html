@@ -1,0 +1,136 @@
+<div>
+
+  <div class="container">
+
+    <div class="form-container">
+      <h1 class="title">Book Appointment</h1>
+
+      <form *ngIf="!otpVerified && !isAppointmentBooked" class="column" [formGroup]="mobileVerificationForm" novalidate>
+        <p class="description">Please give us your mobile number for verification</p>
+        <input type="text" formControlName="name" class="custom-input" name="name" placeholder="Name" />
+        <input type="tel" formControlName="mobile" class="custom-input" name="phone" placeholder="My Phone Number" />
+        <div *ngIf="otpSent">
+          <p class="description">Enter OTP :</p>
+          <ng-otp-input #ngOtpInput inputmode="tel" required (onInputChange)=" onOtpChange($event)"
+            [config]="otpInputConfig"></ng-otp-input>
+        </div>
+        <div class="row row-reverse">
+          <button *ngIf="!otpSent" [disabled]="!city" [class.disabled-button]="!city" (click)="sendOTP()"
+            class="submit-button">Send OTP</button>
+          <button *ngIf="otpSent" (click)="verifyOTP()" class="submit-button">Verify OTP</button>
+          <button *ngIf="otpSent" (click)="sendOTP()" [disabled]="resendOtpTimeLeft>0" class="submit-button"
+            [class.disabled-button]="resendOtpTimeLeft>0">
+            {{resendOtpTimeLeft>0 ? "Resend OTP in "+
+            resendOtpTimeLeft + " secs" : "Resend OTP"}}</button>
+        </div>
+      </form>
+
+      <div *ngIf="otpVerified && !submitted" class="column">
+        <p class="description">Please give us your address, date</p>
+        <input type="tel" [disabled]="otpVerified" [value]="mobileVerificationForm.value.mobile" class="custom-input"
+          name="phone" placeholder="My Phone Number" />
+
+        <input ngx-google-places-autocomplete type="search"
+          (search)="formattedAddress='';categoryId='';disableAddressCategory=false;"
+          (onAddressChange)="handleAddressChange($event)" class="custom-input custom-input-icon input-location-icon"
+          placeholder="Search Location" [value]="formattedAddress" (keydown.enter)="$event.preventDefault()">
+
+        <label *ngIf="defaultAddresses.length>0" class="saved-locations">
+          <span>Saved locations</span>
+          <input type="text" style="width:100%;height:0;outline:none;border:none;padding: 0;margin:0;"
+            [matAutocomplete]="auto">
+        </label>
+
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="setMapCenter($event)">
+          <mat-option style="margin-bottom: 10px;" *ngFor="let address of defaultAddresses" [value]="address.addressId">
+            {{address.formattedAddress}}
+          </mat-option>
+        </mat-autocomplete>
+
+
+        <select name="addressType" class="custom-input custom-select" [value]="categoryId" [(ngModel)]="categoryId"
+          [disabled]="disableAddressCategory">
+          <option value="" disabled selected>My Address Type</option>
+          <option [value]='addressCategory.consumerCategoryId' *ngFor="let addressCategory of addressCategories;">
+            {{addressCategory.name}}</option>
+        </select>
+
+        <div class="row" (click)="picker.open()">
+          <input class="custom-input custom-input-icon input-calendar-icon" disabled="true" style="width: 100%;"
+            placeholder="Service Date" [min]='minDate' [defaultValue]="this.appointmentDate" matInput
+            [matDatepicker]="picker" (dateChange)="handleDateSelected($event)">
+          <mat-datepicker #picker hidden disabled="false"></mat-datepicker>
+        </div>
+
+        <div class="row row-reverse">
+          <button (click)="submit()" class="submit-button">Next</button>
+        </div>
+      </div>
+
+      <div *ngIf="submitted">
+        <p class="description">Please select your service</p>
+
+        <div class="row" style="flex-wrap:nowrap;">
+          <mat-icon (click)="slidePrev()" class="arrow-icon" [ngClass]="{'disabled-navigation':isSlideBeginnging}">
+            arrow_back_ios
+          </mat-icon>
+
+          <swiper #swiper [navigation]="true" [breakpoints]="breakpoints">
+            <ng-template swiperSlide *ngFor="let service of servicesList; index as i">
+              <img (click)="selectServiceCategory(i)"
+                [src]="serviceSelected===i?service.afterClickImage:service.beforeClickImage" [alt]="service.name" />
+            </ng-template>
+          </swiper>
+          <mat-icon class="arrow-icon" (click)="slideNext()" [ngClass]="{'disabled-navigation':isSlideEnd}">
+            arrow_forward_ios
+          </mat-icon>
+        </div>
+        <hr />
+        <p>Service : {{selectedServiceName}}</p>
+
+
+        <div class="cards-container">
+
+          <div class="grid-wrapper grid-col-auto" *ngFor="let subCategory of subCategories; index as i;"
+            (click)="selectSubService(subCategory)">
+            <label [for]="'radio-card-'+i" class="radio-card">
+              <input type="radio" name="radio-card" [id]="'radio-card-'+i" [checked]="i===0" />
+              <div class="card-content-wrapper">
+                <span class="check-icon"></span>
+                <div class="card-content">
+                  <h4>{{subCategory.productName}}</h4>
+                  <h5>&#8377; {{subCategory.price}}</h5>
+                </div>
+                <div class="card-description">
+                  <p>{{subCategory.description}}</p>
+                </div>
+              </div>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <button (click)="goBack()" class="submit-button">
+            Go Back</button>
+          <button (click)="bookAppointment()" class="submit-button">Book Appointment</button>
+        </div>
+      </div>
+
+
+      <p class="errorMessage">{{errorMessage}}</p>
+      <p class="succcesMessage">{{successMessage}}</p>
+    </div>
+
+
+    <div class="map-container">
+      <google-map #map [width]="screenWidth<768?screenWidth:650" class="google-map" [center]="center" [zoom]="zoom">
+        <map-marker [position]="center" [options]="markerOptions" (mapDragend)="onMarkerDragEnd($event)"></map-marker>
+      </google-map>
+    </div>
+  </div>
+
+  <app-bill-desk #billDesk></app-bill-desk>
+
+
+</div>

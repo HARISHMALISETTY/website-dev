@@ -1,0 +1,51 @@
+<!-- <div class="title">
+  <p>TESTIMONIALS</p>
+</div> -->
+<swiper #swiper class="testimonial-carousel" [pagination]="true" [slidesPerView]="1" (swiper)="onSwiper($event)"
+  [breakpoints]="breakpoints" (slideChange)="onSlideChange()">
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-image" src="assets/Testimonials.svg" height="80" width="80" />
+        <div class="card-text">
+          <p>I was thoroughly impressed with the level of professionalism and quality of work. The cleaners arrived on time and were very courteous.
+          </p>
+        </div>
+      </div>
+      <div class="card-customer-name">
+        <p>Radhika Pardeshi</p>
+        <p>Customer</p>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-image" src="assets/Testimonials.svg" height="80" width="80" />
+        <div class="card-text">
+          <p>I particularly appreciated the flexibility of scheduling. This allowed me to choose a convenient time for the cleaners to come, which made the entire process even more stress-free.
+          </p>
+        </div>
+      </div>
+      <div class="card-customer-name">
+        <p>Chandan Gowda</p>
+        <p>Customer</p>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-image" src="assets/Testimonials.svg" height="80" width="80" />
+        <div class="card-text">
+          <p>The company provided excellent customer service, promptly responding to any inquiries or concerns that I had both before and after the cleaning.
+          </p>
+        </div>
+      </div>
+      <div class="card-customer-name">
+        <p>Armaan G</p>
+        <p>Customer</p>
+      </div>
+    </div>
+  </ng-template>
+</swiper>

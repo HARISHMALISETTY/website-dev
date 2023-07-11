@@ -1,0 +1,402 @@
+/* .Bcallid {
+  background: #fff url(../icons/Icons-83.png) left no-repeat;
+} */
+
+/* .commonbook-cls-mv {
+  height: 40px;
+  width: 90%;
+  border: 1px solid #ccc;
+  align-items: left;
+  padding-left: 33px;
+  background-position-x: 5px !important;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+} */
+
+
+
+
+.container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  /* max-width: 1000px; */
+
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  /* background-color: white; */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  margin-bottom: auto;
+  width: 100%;
+  padding: 10px;
+
+  @media screen and (min-width:768px) {
+    max-width: 400px;
+  }
+
+}
+
+.map-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100%;
+  // .google-map {
+  //   @media screen and (min-width:991px) {
+  //   }
+  // }
+}
+
+
+.title {
+  margin: 0;
+  color: #048242;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+}
+
+.succcesMessage {
+  color: #048242;
+  font-size: 16px;
+}
+
+.custom-input {
+  outline: none;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  resize: none;
+}
+
+.custom-input-icon {
+  background: url(/assets/location.svg) no-repeat scroll;
+  background-position: right 4% bottom 45%;
+  /* background-size: 2px; */
+  padding-right: 40px;
+  /* font-size: 5px; */
+}
+
+.custom-select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  /* background-color: #fafafa; */
+  /* height: 45px; */
+  width: 97%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  /* border: 1px solid #ccc; */
+  /* padding: 0.5rem; */
+  /* border-radius: 0; */
+}
+
+.input-location-icon {
+  background-image: url(/assets/location.svg);
+  background-position: right -4% bottom 125%;
+}
+
+.input-calendar-icon {
+  background-image: url(/assets/Book_Appointment.png);
+}
+
+.custom-input::placeholder {
+  color: gray;
+}
+
+.submit-button {
+  padding: 10px;
+  font-weight: bold;
+  /* width: 100px; */
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin: 5px;
+  min-width: 80px;
+}
+
+.submit-button:not(.disabled-button):hover {
+  background-color: transparent;
+  border: 1px solid #4caf50;
+  color: black;
+}
+
+.saved-locations {
+  font-size: 15px;
+  text-align: right;
+  color: #6dbd48;
+  user-select: none;
+  cursor: pointer;
+  height: 10px;
+}
+
+.disabled-button {
+  cursor: not-allowed;
+  background-color: #8f928f;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.otp-input-box {
+  height: 10px;
+  width: 10px;
+}
+
+.services-carousel {
+  user-select: none;
+  cursor: pointer;
+}
+
+.service-card {
+  margin: 5px;
+  position: relative;
+}
+
+.radio-button {
+  position: absolute;
+  left: 5px;
+  top: 20px;
+}
+
+
+.accordion {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.accordion-item {
+  display: block;
+  border: solid 1.5px #666666;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.accordion-item-active {
+  border: solid 1.5px #6dbd48;
+}
+
+.accordion-item-header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.accordion-item-header-active {
+  color: #048242;
+}
+
+.sub-service-name {
+  margin-top: 0;
+}
+
+.sub-service-price {
+  margin-bottom: 0;
+}
+
+.accordion-item-description {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.accordion-item-header,
+.accordion-item-body {
+  padding: 5px;
+}
+
+.accordion-item-header:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+// Formatting Styles
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+.cards-container {
+  max-width: 99vw;
+  margin: 15px auto;
+  height: 300px;
+  padding: 5px 15px;
+  overflow: auto;
+}
+
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 30px;
+  place-items: center;
+  place-content: center;
+}
+
+.grid-col-auto {
+  // grid-template-columns: repeat(auto-fill, minmax(280px, 0.1fr));
+  grid-auto-flow: column;
+  grid-template-rows: auto;
+}
+
+/* ******************* Main Styeles : Radio Card */
+
+$primary-color: #048242;
+$transition: 200ms linear;
+
+label.radio-card {
+  cursor: pointer;
+  position: relative;
+
+  .card-content-wrapper {
+    background: #fff;
+    border-radius: 5px;
+    width: 240px;
+    // min-height: 330px;
+    padding: 15px;
+    display: grid;
+    box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 1);
+    // box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.04), 0 0 0 2px gray;
+    transition: $transition;
+
+    @media screen and (min-width:768px) {
+      width: 300px;
+    }
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: solid 2px #e3e3e3;
+    border-radius: 50%;
+    transition: $transition;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.93552 4.58423C0.890286 4.53718 0.854262 4.48209 0.829309 4.42179C0.779553 4.28741 0.779553 4.13965 0.829309 4.00527C0.853759 3.94471 0.889842 3.88952 0.93552 3.84283L1.68941 3.12018C1.73378 3.06821 1.7893 3.02692 1.85185 2.99939C1.91206 2.97215 1.97736 2.95796 2.04345 2.95774C2.11507 2.95635 2.18613 2.97056 2.2517 2.99939C2.31652 3.02822 2.3752 3.06922 2.42456 3.12018L4.69872 5.39851L9.58026 0.516971C9.62828 0.466328 9.68554 0.42533 9.74895 0.396182C9.81468 0.367844 9.88563 0.353653 9.95721 0.354531C10.0244 0.354903 10.0907 0.369582 10.1517 0.397592C10.2128 0.425602 10.2672 0.466298 10.3112 0.516971L11.0651 1.25003C11.1108 1.29672 11.1469 1.35191 11.1713 1.41247C11.2211 1.54686 11.2211 1.69461 11.1713 1.82899C11.1464 1.88929 11.1104 1.94439 11.0651 1.99143L5.06525 7.96007C5.02054 8.0122 4.96514 8.0541 4.90281 8.08294C4.76944 8.13802 4.61967 8.13802 4.4863 8.08294C4.42397 8.0541 4.36857 8.0122 4.32386 7.96007L0.93552 4.58423Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 12px;
+      background-position: center center;
+      transform: scale(1.6);
+      transition: $transition;
+      opacity: 0;
+    }
+  }
+
+  input[type='radio'] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:checked {
+      +.card-content-wrapper {
+        box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.5), 0 0 0 2px $primary-color;
+
+        .check-icon {
+          background: $primary-color;
+          border-color: $primary-color;
+          transform: scale(1.2);
+
+          &:before {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &:focus {
+      +.card-content-wrapper {
+        .check-icon {
+          box-shadow: 0 0 0 4px rgba(48, 86, 213, 0.2);
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    position: absolute;
+    top: 29px;
+    left: 55px;
+
+    h4 {
+      font-size: 16px;
+      letter-spacing: -0.24px;
+      // text-align: center;
+      color: #1f2949;
+      margin: 0;
+      padding: 0;
+    }
+
+    h5 {
+      font-size: 14px;
+      line-height: 1.4;
+      // text-align: center;
+      color: #686d73;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.card-description {
+  p {
+    margin-bottom: 0;
+  }
+}

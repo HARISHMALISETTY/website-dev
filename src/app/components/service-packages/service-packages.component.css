@@ -1,0 +1,122 @@
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.title p:first-child{
+  font-size: 30px;
+  font-weight: 400;
+  color: #4caf50;
+  margin: 0;
+}
+
+.title p:last-child{
+  font-weight:bold;
+  color: #4caf50;
+  margin: 0;
+  font-size: 20px;
+}
+
+.container{
+display: flex;
+justify-content: center;
+gap: 40px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.card-container{
+  /* height: 300px; */
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 40px rgb(214, 211, 211); */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.card-header{
+  display: flex;
+  gap:10px;
+  text-align: left;
+}
+
+.card-header-name{
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-header-service-type{
+  font-weight: bold;
+  margin:0;
+  font-size: 18px;
+}
+
+.card-list{
+  padding: 0;
+  margin: 15px 0 5px 26px;
+}
+
+.right{
+    list-style: none;
+    padding: 0px 0 14px 0px;
+    list-style: none;
+    background-image: url('/assets/green-tick.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px;
+    font-size: 14px;
+}
+
+.card-button{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border:1px solid transparent;
+}
+
+.card-button:hover{
+  background-color: transparent;
+  border: 1px solid #4caf50;
+  color:black;
+}
+
+
+.service-packages-carousel {
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 40px 0;
+  /* height: 400px; */
+  /* padding: 20px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  user-select: none;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+

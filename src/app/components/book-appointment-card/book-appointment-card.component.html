@@ -1,0 +1,174 @@
+<div class="container">
+
+  <div class="card-container">
+    <div *ngIf="!selectedTabIndex" class="preview-content">
+      <div class="card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Book Appointment</p>
+        </div>
+      </div>
+      <div class="card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Call us at</p>
+          <p class="card-initial-text">85 15 06 06 06</p>
+        </div>
+      </div>
+      <div class="card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Missed Call</p>
+          <p class="card-initial-text">85 15 06 06 06</p>
+        </div>
+      </div>
+      <div class="card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Send a message to</p>
+          <p class="card-initial-text">85 15 06 06 06</p>
+        </div>
+      </div>
+      <div class="card-initial-text-container">
+        <div>
+          <p class="card-initial-text">WhatsApp us to</p>
+          <p class="card-initial-text">85 15 06 06 06</p>
+        </div>
+      </div>
+      <div class="card-initial-text-container card-initial-text-container-last-item">
+        <a href="https://play.google.com/store/apps/details?id=com.click2clean.consumer"><img
+            src="/assets/Google_Play.svg" target="_blank" width="100px" height="40px"></a>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabIndex===1">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Book Appointment</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">Please give your details for our REO (REcycling Officer) to pick up your recyclables.</p>
+        <input type="tel" class="custom-input" name="phone" placeholder="My Phone number" />
+        <button class="submit-button">Generate OTP</button>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabIndex===2">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Call Me Back</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">
+          Give us your phone number, our customer care executive will call you back to setup your appointment.
+        </p>
+        <input type="tel" [(ngModel)]="mobileNo" class="custom-input" name="phone" placeholder="My Phone number" />
+        <button class="submit-button" (click)="callMeBack()">Submit</button>
+      </div>
+      <p class="errorMessage" *ngIf="errorMessage">{{errorMessage}}</p>
+      <p class="succesMessage" *ngIf="successMessage">{{successMessage}}</p>
+    </div>
+
+    <div *ngIf="selectedTabIndex===3">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Give A Missed Call</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">Now contacting Click2Clean is even simpler. All you have to do is, give us a missed call
+          and
+          expect to hear from our customer care executive.</p>
+        <a class="missed-call-number" href="tel:+919876543210">
+          <img src="assets/Missed_Call.png" alt="Give a missed call" />
+          85 15 06 06 06
+        </a>
+        <!-- <a class="missed-call-number" href="tel:04030707072">
+          <img src="assets/Missed_Call.png" alt="Give a missed call" />
+          040 30 70 70 72
+        </a> -->
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabIndex===4">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Send an SMS</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">Fix an appointment with us through an SMS.</p>
+        <p class="card-text">Send SMS to 85 15 06 06 06 with date in DD-MMM format.</p>
+        <p class="card-text">For example type: 05-AUG Send to: 85 15 06 06 06</p>
+        <a class="missed-call-number" href="sms://+918515060606">
+          <img src="assets/SMS.png" alt="send an sms" />
+          85 15 06 06 06
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabIndex===5">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">WhatsApp Us</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">Add us on your WhatsApp contact list. Get in touch through WhatsApp to setup an appointment
+          and sell your recyclables.</p>
+        <p class="card-text">WhatApp your Location, Date and Time in DD-MMM format.</p>
+        <p class="card-text">(05-AUG) to: +91 85 15 06 06 06</p>
+        <a class="missed-call-number" href="whatsapp://send?abid=8515060606">
+          <img src="assets/SMS.png" alt="send an sms" />
+          85 15 06 06 06
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabIndex===6">
+      <div class=" card-initial-text-container">
+        <div>
+          <p class="card-initial-text">Download App</p>
+        </div>
+      </div>
+      <div class="selected-tab-content-container">
+        <p class="card-text">
+          Have you tried our cool Click2Clean App yet? Download it today! Click2Clean App is available on both Android
+          and
+          Iphones. Please download from Playstore or App Store today. Scan the below QR CODE for quick download
+        </p>
+        <div class="qr-img">
+          <img src="assets/qr-code.png" alt="qr code" height="60">
+        </div>
+        <div class="row margin-top">
+          <a href="https://play.google.com/store/apps/details?id=com.click2clean.consumer"><img
+              src="/assets/Google_Play.svg" target="_blank" width="90"></a>
+          <a href=""><img src="/assets/Apple.svg" target="_blank" width="90"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-tab-buttons">
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===1" routerLink="/book-appointment">
+        <img [src]="selectedTabIndex===1?'assets/Book_Appointment_White.png':'assets/Book_Appointment.png'"
+          alt="book appointment" />
+      </div>
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===2" (click)="setSelectedTabIndex(2)">
+        <img [src]="selectedTabIndex===2?'assets/Call_White.png':'assets/Call.png'" alt="Call Me Back" />
+      </div>
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===3" (click)="setSelectedTabIndex(3)">
+        <img [src]="selectedTabIndex===3?'assets/Missed_Call_White.png':'assets/Missed_Call.png'"
+          alt="Give a missed call" />
+      </div>
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===4" (click)="setSelectedTabIndex(4)">
+        <img [src]="selectedTabIndex===4?'assets/SMS_White.png':'assets/SMS.png'" alt="send an sms" />
+      </div>
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===5" (click)="setSelectedTabIndex(5)">
+        <img [src]="selectedTabIndex===5?'assets/Whatsapp_White.png':'assets/Whatsapp.png'" alt="whatsapp us" />
+      </div>
+      <div class="card-button" [class.card-button-active]="selectedTabIndex===6" (click)="setSelectedTabIndex(6)">
+        <img [src]="selectedTabIndex===6?'assets/Download_White.png':'assets/Download.png'" alt="download app" />
+      </div>
+    </div>
+
+    <h3 class="title">Connect with us!</h3>
+  </div>
+</div>

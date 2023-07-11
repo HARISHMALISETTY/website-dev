@@ -1,0 +1,33 @@
+$primary-color: #048242;
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.page-not-found {
+  text-align: center;
+
+  h1 {
+    font-size: 50px;
+    /* margin-bottom: 30px; */
+  }
+
+  p {
+    font-size: 18px;
+    color: #666;
+  }
+
+  a {
+    margin-bottom: 40px;
+    display: inline-block;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}

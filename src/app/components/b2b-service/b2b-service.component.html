@@ -1,0 +1,54 @@
+<!-- <div class="container">
+  <p style="color: #048242;font-weight: bold; text-align: center;">B2B</p>
+  <div class="cards-container">
+    <app-service-card *ngFor="let item of data" [title]="item.title" [lightColor]="item.lightColor" [list]="item.list"
+      [backgroundImage]="item.backgroundImage"></app-service-card>
+  </div>
+</div> -->
+
+
+<!-- 
+<swiper #swiper class="services-carousel" [pagination]="true" [slidesPerView]="1" (swiper)="onSwiper($event)"
+  [breakpoints]="breakpoints" (slideChange)="onSlideChange()"> 
+
+  <ng-container *ngFor="let item of data">
+    <app-service-card [title]="item.title" [lightColor]="item.lightColor" [list]="item.list"
+      [backgroundImage]="item.backgroundImage"></app-service-card>
+  </ng-container>
+
+</swiper> -->
+
+<swiper #swiper class="services-carousel" [pagination]="true" [slidesPerView]="1" (swiper)="onSwiper($event)"
+  [breakpoints]="breakpoints" (slideChange)="onSlideChange()">
+  <ng-template swiperSlide>
+    <app-service-card [title]="sewageData[0].title" [lightColor]="sewageData[0].lightColor" [list]="sewageData[0].list"
+      [backgroundImage]="sewageData[0].backgroundImage"></app-service-card>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-service-card [title]="sewageData[1].title" [lightColor]="sewageData[1].lightColor" [list]="sewageData[1].list"
+      [backgroundImage]="sewageData[1].backgroundImage"></app-service-card>
+  </ng-template>
+  <!-- <ng-template swiperSlide>
+    <div class="card-container">
+      <div class="card">
+        <img class="card-image" src="assets/Testimonials.svg" height="80" width="80" />
+        <div class="card-text">
+          <p>I was thoroughly impressed with the level of professionalism and quality of work. The cleaners arrived on time and were very courteous.
+          </p>
+        </div>
+      </div>
+      <div class="card-customer-name">
+        <p>Radhika Pardeshi</p>
+        <p>Customer</p>
+      </div>
+    </div>
+  </ng-template> -->
+</swiper>
+
+<swiper #swiper class="services-carousel" [pagination]="true" [slidesPerView]="1" (swiper)="onSwiper($event)"
+  [breakpoints]="breakpoints" (slideChange)="onSlideChange()">
+  <ng-template swiperSlide *ngFor="let item of houseKeepingData">
+    <app-service-card [title]="item.title" [lightColor]="item.lightColor" [list]="item.list"
+      [backgroundImage]="item.backgroundImage"></app-service-card>
+  </ng-template>
+</swiper>

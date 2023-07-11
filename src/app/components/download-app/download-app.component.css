@@ -1,0 +1,44 @@
+
+.container{
+  position: relative;
+  color:white;
+  background-image: url('/assets/Click2Clean UI_3_Image.jpg');
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 15px; */
+}
+
+.text{
+  position: absolute;
+  left: 5%;
+  width: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.title{
+  margin: 0;
+}
+
+.description{
+  font-size: 14px;
+  margin: 0;
+}
+
+.qr-img{
+  background-color: white;
+  height: 100px;
+  width: 100px;
+}

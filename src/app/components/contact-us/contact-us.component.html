@@ -1,0 +1,26 @@
+<div class="main-container">
+  <div>
+    <h2 class="title">JOIN US</h2>
+    <p class="description">Join us as a Partner or Join Our Partners as an employee</p>
+  </div>
+  <div class="container">
+    <app-join-us-form></app-join-us-form>
+    <app-join-us-form [showEmployeeSignUpForm]="true" title="Join Our Partners as an employee" description="We look forward to generating employment with our initiative to make people’s
+lives better. Please fill in the details below and we will get back to you."></app-join-us-form>
+  </div>
+</div>
+<div class="map-container">
+  <google-map height="400px" width="100%" [center]="center" [zoom]="zoom">
+    <map-marker [position]="center" [options]="markerOptions"></map-marker>
+  </google-map>
+  <div class="map-address">
+    <div class="row">
+      <p class="map-address-name"><mat-icon>navigation</mat-icon> Click2Clean</p>
+    </div>
+    <p class="map-address-text">A Division of Antony waste Handling Cell Ltd. <br>
+      Registered Office: 1403, 14th Floor, Dev Corpora Building,
+      Opp. Cadbury Company, Eastern Express Highway, Thane – 400 601,
+      Maharashtra, India</p>
+    <a href="tel:+91-22-42130300" class="map-address-number"><mat-icon>phone</mat-icon> +91-22-42130300</a>
+  </div>
+</div>

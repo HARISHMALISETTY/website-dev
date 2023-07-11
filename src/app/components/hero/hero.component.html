@@ -1,0 +1,9 @@
+<swiper #swiper class="carousel" [speed]="3000" [pagination]="true" [loop]="true" [autoplay]="autoplayOptions"
+  [slidesPerView]="1" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
+  <ng-template swiperSlide class="carousel-slide carousel-slide-1"></ng-template>
+  <ng-template swiperSlide class="carousel-slide carousel-slide-2"></ng-template>
+  <ng-template swiperSlide class="carousel-slide carousel-slide-3"></ng-template>
+  <!-- <ng-template swiperSlide class="carousel-slide"><img src="assets/carousel-1.jpg"></ng-template>
+  <ng-template swiperSlide class="carousel-slide"><img src="assets/carousel-2.jpg"></ng-template>
+  <ng-template swiperSlide class="carousel-slide"><img src="assets/carousel-3.jpg"></ng-template> -->
+</swiper>

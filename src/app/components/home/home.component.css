@@ -1,0 +1,141 @@
+
+.carousel-container{
+  position: relative;
+}
+
+.text-over-carousel{
+  position: absolute;
+  white-space: pre-line;
+  font-size: 50px;
+  color: white;
+  top: 40%;
+  left: 20%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.city-select {
+  outline: none;
+  border: 2px solid #4caf50;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+ul p{
+    line-height: 11.5px;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-right: 1px solid #4caf50;
+    font-family: Roboto Condensed;
+    font-size: 15px;
+}
+
+ul p:last-child{
+  border:none;
+}
+
+
+.social-media-icons{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 20px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  color:#646265;
+  margin: 0;
+}
+
+
+.read-more-button{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #4caf50;
+  border:1px solid transparent;
+  cursor: pointer;
+}
+
+.title{
+  color: #288f5b;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 602px) {
+  .text-over-carousel{
+    font-size: 30px;
+    top: 20%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+
+  .social-media-icons{
+    display: none;
+  }
+
+  .nav-links{
+    display: none;
+  }
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+  .booking-card{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    z-index: 999;
+  }
+  .text-over-carousel{
+    top: 40%;
+  left: 5%;
+  font-size: 30px;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+
+  .logo{
+  height: 90px;
+  margin-top: -45px;
+  }
+
+  .menu-icon{
+    display: none;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .text-over-carousel{
+    top: 40%;
+  left: 8%;
+  font-size: 40px;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .booking-card{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    z-index: 999;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

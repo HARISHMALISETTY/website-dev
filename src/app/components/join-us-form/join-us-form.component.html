@@ -1,0 +1,63 @@
+<form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+  <div class="container" [class.employee-form]="showEmployeeSignUpForm">
+    <h3 class="title">{{title}}</h3>
+    <p class="description">{{description}}</p>
+
+    <input type="text" id="name" formControlName="name" class="custom-input" name="name" placeholder="Name" required />
+    <div class="error-message" *ngIf="name && name.invalid && (name.dirty || name.touched)">
+      <div *ngIf=" name.errors && name.errors['required']">Name is required.</div>
+      <div *ngIf="name.errors && name.errors['pattern']">Name must contain only alphabets and be at least 3
+        letters long.</div>
+    </div>
+
+    <input type="tel" id="mobile" formControlName="mobile" class="custom-input" name="phone" placeholder="Phone"
+      required />
+    <div class="error-message" *ngIf=" mobile && mobile.invalid && (mobile.dirty || mobile.touched)">
+      <div *ngIf="mobile.errors && mobile.errors['required']">Mobile number is required.</div>
+      <div *ngIf="mobile.errors && mobile.errors['pattern']">Mobile number must be a 10-digit number.</div>
+    </div>
+
+    <input type="email" id="email" formControlName="email" class="custom-input" name="email" placeholder="Email"
+      required />
+    <div class="error-message" *ngIf="email && email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors && email.errors['required']">Email is required.</div>
+      <div *ngIf="email.errors && email.errors['email']">Email must be a valid email address.</div>
+    </div>
+
+    <textarea [rows]="4" id="message" formControlName="message" class="custom-input" name="message"
+      placeholder="Message" required></textarea>
+    <div class="error-message" *ngIf="message && message.invalid && (message.dirty || message.touched)">
+      <div *ngIf="message.errors && message.errors['required']">Message is required.</div>
+      <div *ngIf="message.errors && message.errors['maxlength']">Message must be no more than 200 characters.</div>
+    </div>
+
+    <div class="row">
+      <div>
+        <span *ngIf="showEmployeeSignUpForm">
+          <input type="file" hidden id="file" formControlName="file" accept=".pdf,.doc,.docx"
+            (change)="onFileSelected($event)" />
+          <label for="file" class="row upload-resume-label" style=" color: gray;">
+            <mat-icon color="primary">upload</mat-icon>
+            {{!file?.value? 'Upload Resume':file?.value.split('\\')?.pop()}}
+          </label>
+
+          <div class="error-message" *ngIf="file && file.invalid && (file.dirty || file.touched)">
+            <div *ngIf="file.errors && file.errors['required']">Resume is required.</div>
+            <div *ngIf="file.errors && file.errors['fileSize']">File size cannot exceed 2 MB.</div>
+            <div *ngIf="file.errors && file.errors['fileType']">File must be a PDF or a DOC file.</div>
+          </div>
+
+        </span>
+      </div>
+      <button class="submit-button" type="submit" [class.submitting]="submitting" [disabled]="submitting">
+        <mat-spinner color="white" diameter="20" *ngIf="submitting"></mat-spinner>
+        <span *ngIf="submitting">Submitting</span>
+        <span *ngIf="!submitting">Submit</span>
+      </button>
+
+    </div>
+
+    <p class="errorMessage" *ngIf="failureMessage">{{failureMessage}}</p>
+    <p class="succesMessage" *ngIf="successMessage">{{successMessage}}</p>
+  </div>
+</form>

@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media screen and (min-width:768px) {
+    .faqs-image {
+      position: -webkit-sticky;
+      /* Safari */
+      margin-top: 5;
+      position: sticky;
+      top: 0;
+      padding-top: 10px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    padding: 10px;
+  }
+
+}
+
+
+.title {
+  color: #048242;
+  text-align: center;
+}
+
+.accordion {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.accordion-item {
+  display: block;
+  border: solid 1.5px #6dbd48;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.accordion-item-header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  color: #048242;
+  font-weight: 500;
+}
+
+.accordion-item-description {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.accordion-item-header,
+.accordion-item-body {
+  padding: 16px;
+}
+
+.accordion-item-header:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
